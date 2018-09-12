@@ -1,16 +1,129 @@
+body{
+  background:#FFF;
+  font-size:14px;
+}
+
+a{
+  color:#000;
+  text-decoration:none;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+.mui-content{
+  background:#FFF;
+}
+img{
+  display: block;
+}
+.list{
+  list-style: none;
+}
 .my-header{
   background-color: #006699;
+  z-index: 10;
   h1,a{
     color:#fff;
   }
 }
-
+.mui-bar-nav~.mui-content{
+  padding:0;
+}
 .my-footer{
   background-color: #006699;
+  z-index: 10;
   .mui-tab-item{
     color:#fff;
   }
   .mui-active.mui-tab-item{
     color:darkorange;
+  }
+}
+.mui-scroll-wrapper{
+  top:44px;
+  bottom: 50px;
+  z-index: 2;
+}
+.nav-link{
+  a{
+    display: block;
+    width: 33.3%;
+    float:left;
+    img{
+      width: 100%;
+    }
+  }
+}
+.brand{
+  padding:0 10px;
+  img{
+    width: 100%;
+    display: block;
+  }
+  .list{
+    margin:0;
+    padding:10px 0;
+    list-style: none;
+    li{
+      width: 25%;
+      float:left;
+      a{
+        width: 100%;
+        img{
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}
+.product{
+  padding:0 10px;
+  img{
+    width: 100%;
+  }
+  .list{
+    width: 100%;
+    padding: 0;
+    li{
+      width: 50%;
+      padding: 5px;
+      float:left;
+      a{
+        padding:5px;
+        text-align: center;
+        overflow: hidden;
+        color: #8f8f94;
+        display: block;
+        width: 100%;
+        box-shadow:0 0 5px #ccc;
+        p{
+          font-size: 14px;
+          margin-bottom: 10px;
+          span:last-child{
+            text-decoration: line-through;
+          }
+      }
+        >span{
+          display: block;
+          height:44px;
+          padding: 6px;
+          line-height: 18px;
+          overflow: hidden;
+        }
+      }
+      img{
+        width: 100%;
+      }
+      button{
+        display: block;
+        margin: 0 auto;
+        border: none;
+        background-color: #006699;
+        margin-bottom: 10px;
+      }
+    }
   }
 }

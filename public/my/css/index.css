@@ -1,0 +1,16 @@
+.my-header {
+  background-color: #006699;
+}
+.my-header h1,
+.my-header a {
+  color: #fff;
+}
+.my-footer {
+  background-color: #006699;
+}
+.my-footer .mui-tab-item {
+  color: #fff;
+}
+.my-footer .mui-active.mui-tab-item {
+  color: darkorange;
+}

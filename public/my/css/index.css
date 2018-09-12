@@ -104,6 +104,9 @@ img {
   font-size: 14px;
   margin-bottom: 10px;
 }
+.product .list li a p span:first-of-type {
+  color: #f30;
+}
 .product .list li a p span:last-child {
   text-decoration: line-through;
 }

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="assets/mui/js/mui.min.js"></script>
     <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/art-template/template-web.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body>
 <header class="mui-bar mui-bar-nav my-header">
@@ -36,7 +38,39 @@
     </a>
 </nav>
 <div class="my-content">
+    <div class="left-list">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                <div class="leftCate" id="leftList">
 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-list">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                <div class="rightCate" id="rightList">
+                    <!--<a href="#" class="items">-->
+                        <!--<img src="./images/brand1.png">-->
+                        <!--<span>耐克</span>-->
+                    <!--</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<script id="temFirst" type="text/template">
+    {{each data}}
+    <a href="javascript:;" data-id="{{$value.id}}">{{$value.categoryName}}</a>
+    {{/each}}
+</script>
+<script id="temSecond" type="text/template">
+    {{each rows}}
+    <a href="#" class="items"><img src="{{$value.brandLogo}}"><span>{{$value.brandName}}</span></a>
+    {{/each}}
+</script>
 </body>
 </html>

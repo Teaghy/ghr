@@ -14,8 +14,12 @@ $(function () {
            //console.log(html);
            $('.list').html(html)
        }
-   })
-
+   });
+    $(window).on('swipeup',function () {
+        $('.filter').animate({'opacity':0}, 1000 , 'linear');
+    }).on('swipedown',function () {
+        $('.filter').animate({'opacity':1}, 1000 , 'linear');
+    })
 
 });
 function getParamsByUrl(url, name) {

@@ -7,19 +7,29 @@
     <link rel="stylesheet" href="assets/mui/css/mui.min.css">
     <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/form.css">
     <script src="assets/mui/js/mui.min.js"></script>
     <script src="assets/zepto/zepto.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/signIn.js"></script>
+    <style>
+        label{
+            font-size: 16px;
+        }
+        .mui-content.signIn-content{
+            padding-top: 44px;
+        }
+    </style>
 </head>
 <body>
 <header class="mui-bar mui-bar-nav my-header">
-    <!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 
-    <h1 class="mui-title">乐淘云购</h1>
-    <a class="mui-icon mui-icon-search  mui-pull-right"></a>
+    <h1 class="mui-title">用户登录</h1>
+    <!--<a class="mui-icon mui-icon-search  mui-pull-right"></a>-->
 </header>
 <nav class="mui-bar mui-bar-tab footer my-footer">
-    <a class="mui-tab-item mui-active" href="index.html">
+    <a class="mui-tab-item" href="index.html">
         <span class="mui-icon mui-icon-home"></span>
         <span class="mui-tab-label">首页</span>
     </a>
@@ -32,12 +42,25 @@
         <span class="mui-tab-label">购物车</span>
     </a>
     <a class="mui-tab-item" href="user.html">
-        <span class="mui-icon mui-icon-person"></span>
+        <span class="mui-icon mui-icon-person mui-active"></span>
         <span class="mui-tab-label">会员中心</span>
     </a>
 </nav>
-<div class="my-content">
-
+<div class="mui-content signIn-content ">
+    <form class="mui-input-group">
+        <div class="mui-input-row">
+            <label>用户名</label>
+            <input type="text" class="mui-input-clear" placeholder="请输入用户名" name="username">
+        </div>
+        <div class="mui-input-row">
+            <label>密码</label>
+            <input type="password" class="mui-input-password" placeholder="请输入密码" name="password">
+        </div>
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn mui-btn-primary" id="signIn" >确认登录</button>
+        </div>
+    </form>
+    <a class="freeSignIn" href="regisiter.html">免费注册</a>
 </div>
 </body>
 </html>

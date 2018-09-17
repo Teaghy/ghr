@@ -67,14 +67,14 @@
 <script type="text/template" id="searchRes">
     {{each data}}
     <li>
-        <a href="javascript:;">
+        <a href="detail.html?id={{$value.id}}">
             <img src="{{$value.pic[0].picAddr}}" alt="">
             <span>{{$value.proName}}</span>
             <p>
                 <span>¥{{$value.price}}</span>
                 <span>¥{{$value.oldPrice}}</span>
             </p>
-            <button data-id="{{$value.id}}" type="button" class="mui-btn mui-btn-primary">立即购买</button>
+            <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
         </a>
     </li>
     {{/each}}

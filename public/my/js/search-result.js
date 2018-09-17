@@ -29,11 +29,11 @@ $(function () {
         mui('.mui-scroll-wrapper').pullRefresh().refresh(true);
         getData();
     });
-    $('#detail-box').on('tap','.mui-btn',function () {
-       var id= $(this).data('id');
-       console.log(id)
-       location.href="detail.html?"+id;
-    })
+    // $('#detail-box').on('tap','.mui-btn',function () {
+    //    var id= $(this).data('id');
+    //    console.log(id);
+    //    location.href="detail.html?"+id;
+    // })
 });
 function getData() {
     if(!This){

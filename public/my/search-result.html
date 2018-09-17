@@ -11,8 +11,14 @@
     <script src="assets/mui/js/mui.min.js"></script>
     <script src="assets/zepto/zepto.min.js"></script>
     <script src="assets/art-template/template-web.js"></script>
-    <script src="js/search-result.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/search-result.js"></script>
+    <style>
+        .mui-btn-primary:enabled:active{
+            border:none;
+        }
+    </style>
+
 </head>
 <body>
 <header class="mui-bar mui-bar-nav my-header">
@@ -51,7 +57,7 @@
                 </div>
             </div>
             <div class="product" id="refreshProduct">
-                <ul class="list mui-clearfix">
+                <ul class="list mui-clearfix" id="detail-box">
 
                 </ul>
             </div>
@@ -68,7 +74,7 @@
                 <span>¥{{$value.price}}</span>
                 <span>¥{{$value.oldPrice}}</span>
             </p>
-            <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+            <button data-id="{{$value.id}}" type="button" class="mui-btn mui-btn-primary">立即购买</button>
         </a>
     </li>
     {{/each}}

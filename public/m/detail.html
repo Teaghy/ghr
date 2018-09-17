@@ -6,25 +6,16 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="assets/mui/css/mui.min.css">
 	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/detail.css">
 	<script src="assets/zepto/zepto.min.js"></script>
 	<script src="assets/artTemplate/template-native.js"></script>
 	<script src="assets/mui/js/mui.min.js"></script>
 	<script src="js/public.js"></script>
-	<script src="js/user.js"></script>
-	<style>
-		.mui-table-view a {
-			font-size: 14px;
-		}
-
-		.mui-table-view {
-			margin-top: 0!important;
-		}
-	</style>
+	<script src="js/detail.js"></script>
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav my-header">
-		<h1 class="mui-title">会员中心</h1>
-		<a class="mui-icon mui-icon-search mui-pull-right"></a>
+		<h1 class="mui-title">商品详情</h1>
 	</header>
 	<nav class="mui-bar mui-bar-tab my-footer">
 		<a class="mui-tab-item" href="index.html">
@@ -39,40 +30,60 @@
 			<span class="mui-icon iconfont icon-daohanggouwuche"></span>
 			<span class="mui-tab-label">购物车</span>
 		</a>
-		<a class="mui-tab-item mui-active" href="user.html">
+		<a class="mui-tab-item" href="user.html">
 			<span class="mui-icon mui-icon-person"></span>
 			<span class="mui-tab-label">会员中心</span>
 		</a>
 	</nav>
 	<div class="mui-content">
-		<ul class="mui-table-view" id="userInfoBox">
-		    
-		</ul>
-		<ul class="mui-table-view">
-		    <li class="mui-table-view-cell">
-		        <a href="modify.html" class="mui-navigate-right">修改密码</a>
-		    </li>
-		    <li class="mui-table-view-cell">
-		        <a class="mui-navigate-right">我的购物车</a>
-		    </li>
-		    <li class="mui-table-view-cell">
-		        <a href="adress.html" class="mui-navigate-right">收货地址管理</a>
-		    </li>
-		    <li class="mui-table-view-cell">
-		        <a class="mui-text-center" id="logout">退出登录</a>
-		    </li>
-		</ul>
+		
+		<div id="product-box">
+			
+		</div>
+
+		<div class="num">
+			<div class="mui-pull-left">数量：</div>
+			<div class="mui-pull-left selectNum">
+				<span id="reduce">-</span>
+				<input type="text" value="1" id="inp">
+				<span id="increase">+</span>
+			</div>
+			<div class="mui-pull-left">剩余：44件</div>
+		</div>
+
+		<div class="btns">
+			<a href="cart.html">查看购物车</a>
+			<span id="addCart">加入购物车</span>
+		</div>
 	</div>
-	<script type="text/template" id="userTpl">
-		<li class="mui-table-view-cell mui-media">
-		    <a href="javascript:;">
-		        <img class="mui-media-object mui-pull-left" src="images/user.jpg">
-		        <div class="mui-media-body">
-		            <%=mobile %>
-		            <p class='mui-ellipsis'>账号:<%=username %></p>
-		        </div>
-		    </a>
-		</li>
+	<script type="text/template" id="productTpl">
+		
+		<div class="mui-slider">
+			<div class="mui-slider-group">
+				<% for(var i=0;i<pic.length;i++){ %>
+				<div class="mui-slider-item">
+					<img src="<%=pic[i].picAddr %>"/>
+				</div>
+				<% } %>
+			</div>
+		</div>
+		
+		<div class="product-title">
+			<%=proName %>
+		</div>
+		<div class="price">
+			价格：
+			<span class="now">¥<%=price%></span>
+			<span class="old">¥<%=oldPrice%></span>
+		</div>
+		<div class="size">
+			尺码：
+			<% var size = size.split('-') %>
+			<!-- ["35","56"] -->
+			<% for(var i=size[0];i<=size[1];i++){ %>
+			<span><%=i %></span>
+			<% } %>
+		</div>
 	</script>
 </body>
 </html>

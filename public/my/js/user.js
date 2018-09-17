@@ -6,12 +6,9 @@ $.ajax({
     async: false,
     success: function(res){
         console.log(res);
-
         // 用户没有登录
         if(res.error == 400){
-
             location.href = "signIn.html";
-
         }
 
         userInfo = res;
@@ -32,5 +29,9 @@ $(function () {
                }
            }
        })
-   })
+   });
+   //console.log(userInfo)
+   var html=template('userTemp',userInfo);
+   console.log(html);
+   $('#userInfoBox').html(html)
 });

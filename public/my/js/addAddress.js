@@ -12,6 +12,7 @@ $(function () {
         $('#editForm').html(html);
     }
     var picker = new mui.PopPicker({layer:3});
+    console.log();
     picker.setData(cityData);
     $('#addAddress').on('tap',function () {
         var username=$('[name="username"]').val();
@@ -55,6 +56,9 @@ $(function () {
             var province=SelectedItem[0].text;
             var downCity=SelectedItem[1].text;
             var area=SelectedItem[2].text;
+            if(!area){
+                area=''
+            }
             $('#selectCity').val(province+downCity+area);
         })
     });
